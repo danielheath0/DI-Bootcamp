@@ -1,77 +1,96 @@
 * {
-    margin:0;
-    padding:0;
-    border: 1px solid red
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid red; */
 }
 
-.item1, .item2, .item3, .item4 {
-    background-size: cover;
-    height: 400px;
-    width:300px;
-    display:inline-block;
-    margin:5px;
-    padding: 5px;
-
+.itempic {
+  height: 380px;
+  width: 300px;
+  overflow: hidden;
+  position:relative;
 }
 
-
-
-p {
-    background-color: white;
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-
+img {
+  width: 100%;
 }
 
-.newprice, .oldprice {
-    width:48%;
-    display: inline-block;
-    
-}
-.itemcontainer{
-    bottom: 0;
-    text-align: center;
+.item {
+  display: inline-block;
 }
 
-button {
-   text-align: center;
+.text {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  display: block;
+  padding: 5px 10px;
+}
+
+.newprice,
+.oldprice {
+  width: 48%;
+  display: inline-block;
 }
 
 .newprice {
-    color: green;
-    font-size: 1.2em;
-    text-align: end;
+  text-align: right;
+  color: green;
+  font-size: 1.2em;
 }
 
 .oldprice {
     color: grey;
-    font-size: 0.8em;
-    text-decoration: line-through;
-    text-align: start;
+    text-decoration-line: line-through;
+}
+.button {
+  background-color: lightblue;
+  color: black;
+  padding: 5px 10px;
+  outline: black;
+  text-decoration: none;
+  display: inline-block;
+
+  margin-top: 10px;
+  margin-left: 30%;
 }
 
-.itemcontainer {
-    background-color: white;
+.button:hover {
+  background: cornflowerblue;
+  color: white;
 }
 
-.row {
-    width:100%;
-    display:inline;
+.text {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-.item1 {
-    background-image: url(image1.png);
+.circle {
+    /* background-color: green; */
+    position: absolute;
+    
+    color: white;
+    height: 40px;
+    top: 30px;
+    width: 40px;
+    border-radius: 50%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    display: table-cell;
+    line-height:40px
+}
+
+.green {
+    background-color: green;
+    left: 20px;
     
 }
-.item2 {
-    background-image: url(image2.png);
-    
-}
-.item3 {
-    background-image: url(image3.png);
-    
-}
-.item4 {
-    background-image: url(image4.png);
-    
+
+.red { 
+    background-color: red;
+    right:20px
 }
