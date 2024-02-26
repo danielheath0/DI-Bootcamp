@@ -1,0 +1,14 @@
+#nav {
+    float:left;
+    margin-left: 20px;
+}
+
+#content{
+    float:right;
+    margin-right: 20px;
+}
+
+#wrap {
+    display:flex;
+    background-color: dark-blue;
+}

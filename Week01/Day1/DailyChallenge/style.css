@@ -1,0 +1,72 @@
+* { font-family: Marvel}
+
+body { 
+    background-image: url(https://wallpapers.com/images/featured-full/iron-man-superhero-ponky3hlfivddo2m.jpg);
+    background-size: cover;
+    margin:0;
+    padding:0;
+}
+
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkred;
+    
+}
+
+li {
+    float:left;
+}
+
+li a {
+    display:block;
+    color:goldenrod;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+li a:hover {
+    background-color: goldenrod;
+    color: darkred
+}
+
+.logo {
+    height:66.67px;
+    float:right;
+}
+
+h1 {
+    
+    font-size: 144px;
+    color: goldenrod;
+    margin-left: 30px;
+}
+
+section {
+    font-size:20px;
+    color: silver;
+    padding-left: 15px;
+    width: 45%;
+    text-align:justify;
+
+}
+
+footer {
+    position: fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+    background-color: darkred;
+    color:goldenrod;
+    text-align: right;
+}
+
+footer a {
+    text-decoration: none;
+    color: silver
+}

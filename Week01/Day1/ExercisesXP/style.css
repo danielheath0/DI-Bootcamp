@@ -1,0 +1,48 @@
+.highlight {
+    background-color: yellow;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+ul > li {
+    margin-left: 40px;
+}
+
+.centre {
+    text-align:center;
+}
+
+img {
+    width: 50%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    border: 3px orange solid
+
+}
+
+#firsttable {
+    color:red;
+    border: 1px solid red;
+    margin-left:auto;
+    margin-right:auto;
+    width: 70%;
+}
+
+#secondtable {
+    border: 1px solid black;
+    margin-left:auto;
+    margin-right:auto;
+    width: 70%;
+}
+
+th, td {
+    text-align: center;
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+}

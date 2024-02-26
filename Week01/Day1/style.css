@@ -1,0 +1,23 @@
+div {
+  width: 33%;
+  height: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.red {
+  background-color: red;
+}
+
+.white {
+  background-color: white;
+}
+
+.blue {
+  background-color: blue;
+}
+
+section {
+  display: flex;
+  border: solid 1px black;
+}

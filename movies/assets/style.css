@@ -1,0 +1,28 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: black;
+}
+
+#navimg {
+    width: 24px;
+    filter:invert(1);
+    padding: 2px
+   
+}
+
+div {
+    display: table-cell;
+    vertical-align: middle;
+    float:left;
+}
+
+.poster {
+    width: 60px;
+    display: inline-block;
+
+}
