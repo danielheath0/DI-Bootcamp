@@ -4,6 +4,17 @@
   /* outline: 1px solid red; */
 }
 
+.container {
+    padding-top: 30px
+    
+}
+
+.row {
+    display: inline-block;
+    margin-left:100px;
+    margin-right:auto
+}
+
 .itempic {
   height: 380px;
   width: 300px;
