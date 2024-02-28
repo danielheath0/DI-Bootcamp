@@ -1,0 +1,37 @@
+* {margin:0;
+padding: 0;}
+
+.main {
+    padding: 0px;
+    display: grid;
+    width:271px;
+    
+  
+    grid-template-columns: repeat(16, 1fr);
+  
+    grid-template-rows: repeat(16, 1fr);
+  
+    gap: 1px;
+    
+  }
+
+  .grid-a {
+    /* grid-area:a; */
+    background-color: #ff7100 ;
+    width:16px;
+    height:16px;
+  }
+
+  .grid-b {
+    /* grid-area:b; */
+    background-color: #ffb26d ;
+    width:16px;
+    height:16px;
+  }
+  
+  .grid-c {
+    /* grid-area:c; */
+    background-color: #a84a00 ;
+    width:16px;
+    height:16px;
+  }
