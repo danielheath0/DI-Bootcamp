@@ -1,0 +1,47 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+.container {
+    height: 500px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+}
+
+
+
+
+
+.one {
+    background-color: lightpink;
+    height:70px;
+    width: 100%;
+    flex:1;
+
+}
+
+.two {
+    background-color:lightgreen;
+    flex:3;
+    width:70%
+    /* height:160px;
+    width: 70% */
+}
+
+
+
+.three {
+    background-color: lightgoldenrodyellow;
+    height: 70px;
+    width:100%;
+    flex:1;
+
+}
+
+.one, .two, .three {
+    margin:30px
+}

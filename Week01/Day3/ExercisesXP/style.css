@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed";
+}
+
+.main {
+  padding: 30px;
+  display: grid;
+  grid-template-areas:
+    "name name pic"
+    "cont prof prof"
+    "edu exp exp";
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-auto-rows: minmax(150px, auto);
+
+  gap: 5px;
+  
+}
+
+.grid-name {
+  grid-area: name;
+  /* background-color: aliceblue; */
+  align-self:center;
+  padding:10px;
+  /* outline: 1px solid black */
+
+  
+}
+.grid-pic {
+  grid-area: pic;
+  /* background-color: antiquewhite; */
+  display: grid;
+}
+.grid-cont {
+  grid-area: cont;
+  /* background-color: aqua; */
+  padding:10px;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.grid-prof {
+  grid-area: prof;
+  /* background-color: yellowgreen; */
+  padding:10px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+
+
+
+}
+.grid-edu {
+  grid-area: edu;
+  /* background-color: lightpink; */
+  padding:10px;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+
+
+
+
+}
+.grid-exp {
+  grid-area: exp;
+  /* background-color: chartreuse; */
+  padding:10px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+
+
+
+}
+
+#mepic {
+  width: 20vh;
+  height: 20vh;
+  justify-self: center;
+  align-self: center;
+}
+
+.deets {
+  margin-left: 10px;
+}
+
+hr {
+    width:50px;
+    border-top: 2px solid orange;
+    text-align:left;
+    margin: 5px auto 7px 0;
+}
+
+/* i,h3 {margin-left:10px} */
+
+.fname {
+    font-variant: small-caps;
+    font-size: 2em;
+}
+
+.lname {
+    font-variant:small-caps ;
+    font-weight:bold;
+    font-size:2em;
+}
+
+.jobtitle {
+    font-size:1.2em
+}
