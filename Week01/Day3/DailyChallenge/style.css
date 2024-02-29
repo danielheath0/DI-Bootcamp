@@ -1,3 +1,7 @@
+* {
+  outline: 3px red solid
+}
+
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -18,7 +22,7 @@
   /* background-color: lightpink; */
   height:50vh;
   /* border: 1px black solid; */
-  width:50%;
+  /* width:50%; */
   display:flex;
   justify-content: space-between;
   align-items:center;
