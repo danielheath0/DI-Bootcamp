@@ -17,9 +17,9 @@
     <title>Document</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navstyle fixed-top">
       <div class="container">
-        <a class="navbar-brand" style="font-family: Kanit" href="#"
+        <a class="homebutton" style="font-family: Kanit" href="#"
           >Daniel Heath</a
         >
         <button
@@ -64,13 +64,78 @@
             </li>
           </ul>
         
-        <a href="#"
+        <a href="#contact"
           ><button type="button" class="btn text-nowrap buttoncolor">Contact me</button></a
         ></div>
       </div>
     </nav>
+    <div class="container-fluid d-flex justify-content-center mt-5 mb-5">
+      <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg" alt="image placeholder" class="img-fluid">
+    </div>
     <div class="container">
-      <div class="row"></div>
+      <div class="row">
+        <div class="col-md-3">
+          <h2>About me</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolorum ea accusamus quisquam neque. Illo corrupti nostrum, dolor ullam earum commodi debitis eaque eius? Voluptatibus quisquam recusandae aliquam unde accusamus.</p>
+        </div>
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card" style="width: 100%;">
+                <img src="https://cdn.arstechnica.net/wp-content/uploads/2016/02/5718897981_10faa45ac3_b-640x624.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Portfolio 1</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 100%;">
+                <img src="https://cc-prod.scene7.com/is/image/CCProdAuthor/adobe-firefly-marquee-text-to-image-0-desktop-1000x1000?$pjpeg$&jpegSize=300&wid=1000" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Portfolio 2</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card" style="width: 100%;">
+                <img src="https://pixlr.com/images/index/product-image-one.webp" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Portfolio 3</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="contact">
+
+      <h2>Contact form</h2>
+      <form action="">
+        
+        <div class="form-floating m-1">
+          <input type="text" class="form-control" id="floatingInputFname" placeholder="First name">
+          <label for="floatingInputFname">First name</label>
+        </div>
+        <div class="form-floating m-1">
+          <input type="text" class="form-control" id="floatingInputLname" placeholder="Last name">
+          <label for="floatingInputLname">Last name</label>
+        </div>
+        <div class="form-floating m-1">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating m-1">
+          <input type="textarea" class="form-control" id="floatingComment" placeholder="Queries/Comments">
+          <label for="floatingComment">Queries/Comments</label>
+        </div>
+      </form>
     </div>
 
     <script

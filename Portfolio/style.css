@@ -1,9 +1,23 @@
+body {
+    background-color: #81dede;
+}
+
 .navstyle {
-    background-color: blue;
-    color:red
+    background-color: #ff9393;
+    
 }
 
 .buttoncolor {
-    background-color: #d35147;
+    background-color: #e96e6e;
     color:#fff7a3;
+}
+
+.homebutton {
+    text-decoration: none;
+    color: black;
+}
+
+.homebutton ::hover {
+    color:#81dede;
+
 }
