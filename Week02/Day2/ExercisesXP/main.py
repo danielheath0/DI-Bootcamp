@@ -116,3 +116,68 @@
 # print(f"Your total price is {price} shekels")
 
 #Exercise 9
+
+# guest_age = input("Please enter ages of guests separated by spaces:")
+
+# guest_age_list = guest_age.split()
+# print(guest_age_list) # list of ages as strings
+
+# for age_index in range(len(guest_age_list)):
+#     guest_age_list[age_index] = int(guest_age_list[age_index])
+    
+# print(guest_age_list) # list of ages as integers
+
+
+# count_baby = 0
+# count_child = 0
+# count_adult = 0
+
+# for age_index in range(len(guest_age_list)):
+#     if guest_age_list[age_index] <3:
+#         count_baby += 1
+#     elif guest_age_list[age_index] >= 12:
+#         count_adult += 1
+#     else:
+#         count_child += 1
+
+# total_cost = count_baby*0 + count_child*10 + count_adult*15
+
+# print(f"The total cost is ${total_cost}.")
+
+# list_of_names = ["Simon", "Jane", "Adam", "Sonya"]
+# temp_list = []
+# for teenager in list_of_names:
+
+#     old_enough = int(input(f"How old is {teenager}? "))
+#     if old_enough in range(16,22):
+#        temp_list.append(teenager)
+#     else:
+#         continue        
+
+# list_of_names = temp_list
+
+# print(list_of_names)
+
+
+#Exercise 10
+
+sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+
+while "Pastrami sandwich" in sandwich_orders:
+    sandwich_orders.remove("Pastrami sandwich")
+    
+print(sandwich_orders)
+
+finished_sandwiches = []
+for sandwich in sandwich_orders:
+    finished_sandwiches.append(sandwich)
+    
+
+sandwich_orders.clear()
+
+    
+print(finished_sandwiches)
+print(sandwich_orders)
+
+for sandwich in finished_sandwiches:
+    print(f"I made your {sandwich.lower()}.")    
