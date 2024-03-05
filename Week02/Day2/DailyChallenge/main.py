@@ -1,15 +1,15 @@
-#Challenge 1
+# #Challenge 1
 
-number = int(input("Please enter a number: "))
-length = int(input("Please enter a length: "))
+# number = int(input("Please enter a number: "))
+# length = int(input("Please enter a length: "))
 
-sequence = []
+# sequence = []
 
-for i in range(1,length + 1):
-    sequence.append(i*number)
+# for i in range(1,length + 1):
+#     sequence.append(i*number)
     
 
-print(sequence)  
+# print(sequence)  
 
 
 #Challenge 2
@@ -22,5 +22,5 @@ for letter in userword:
     if letter != result[-1]:
         result.append(letter)
     
-result.pop(0)    
+# result.pop(0)    
 print("".join(result))
