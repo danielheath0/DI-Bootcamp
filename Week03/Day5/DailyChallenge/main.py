@@ -20,6 +20,7 @@ class Card:
         self.suit = suit
         self.value = value
 
+
 suits = ("Hearts", "Diamonds", "Clubs", "Spades")
 values = (
     "Ace",
@@ -35,7 +36,7 @@ values = (
     "Jack",
     "Queen",
     "King",
-    )
+)
 
 
 def make_deck():
@@ -43,39 +44,32 @@ def make_deck():
     for v in product(values, suits):
         card_name = f"{values}_of_{suits}"
         card = Card(values, suits)
-        globals()[card_name]=card
+        globals()[card_name] = card
         deck.append(v)
     return deck
 
-class Deck():
+
+class Deck:
     def __init__(self, cards):
         self.cards = cards
-    
+
     def check_deck(self):
         card_set = set()
         for c in self.cards:
             card_set.add(c)
-        if len(card_set)==52:
-            return f'Complete deck!'
-            
-       
+        if len(card_set) == 52:
+            return f"Complete deck!"
+
     def shuffle(self):
         random.shuffle(self.cards)
-        
+
     def deal(self):
         print(self.cards.pop())
-        
-        
+
+
 newdeck = Deck(make_deck())
 newdeck.check_deck()
 newdeck.shuffle()
 print(newdeck.cards)
-newdeck.deal()   
+newdeck.deal()
 print(newdeck.cards)
- 
-    
-
-
-#Cards are objects
-#Decks don't create cards = they just check how many and then shuffle them.
-#Input to deck can be list of cards
