@@ -1,0 +1,3 @@
+-- -- SELECT COUNT(*) FROM actors
+-- INSERT INTO actors (first_name, last_name, number_oscars)
+-- VALUES ('Will','Smith', 1)   returns "null value in column 'birthdate" of relation "actors" violates not-null constraint
