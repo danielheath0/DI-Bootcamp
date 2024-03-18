@@ -1,20 +1,23 @@
--- Active: 1710674884574@@127.0.0.1@5432@public@public
+CREATE TABLE FirstTab (
+     id integer, 
+     name VARCHAR(10)
+)
 
---EXERCISE 1
+INSERT INTO FirstTab VALUES
+(5,'Pawan'),
+(6,'Sharlee'),
+(7,'Krish'),
+(NULL,'Avtaar')
 
--- SELECT * FROM items
--- ORDER BY price
+SELECT * FROM FirstTab
 
--- SELECT * FROM items 
--- WHERE price >= 80
--- ORDER BY price DESC
+CREATE TABLE SecondTab (
+    id integer 
+)
 
--- SELECT first_name,last_name FROM customers
--- ORDER BY first_name
--- LIMIT 3
+INSERT INTO SecondTab VALUES
+(5),
+(NULL)
 
--- SELECT last_name FROM customers
--- ORDER BY last_name DESC
 
---EXERCISE 2
-SELECT * FROM customer
+SELECT * FROM SecondTab
