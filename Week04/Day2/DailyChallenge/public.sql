@@ -29,6 +29,7 @@
     -- FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NULL )
 --Actual output is 0 :(
 
+
 #q2 Answer:2
 -- --Check:
 -- SELECT COUNT(*) 
@@ -48,3 +49,4 @@
 -- --Correct!
 
 Lesson is that NULL values ruin counts.
+Specifically, that the question "is a number equal to NULL" is neither true nor false!
