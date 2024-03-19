@@ -1,0 +1,204 @@
+-- Active: 1710674884574@@127.0.0.1@5432@DailyChallenge4-3@public
+--EXERCISE 1
+--
+--CREATE TABLE customer (
+--     id SERIAL NOT NULL,
+--     first_name VARCHAR NOT NULL,
+--     last_name VARCHAR NOT NULL,
+--     PRIMARY KEY (id)
+-- );
+-- CREATE TABLE customer_profile (
+--     id SERIAL NOT NULL,
+--     isLoggedIn BOOLEAN DEFAULT false,
+--     customer_id INT,
+--     PRIMARY KEY (customer_id),
+--     FOREIGN KEY (customer_id) REFERENCES customer(id))
+-- INSERT INTO
+--     customer (first_name, last_name)
+-- VALUES
+--     ('John','Doe'),
+--     ('Jerome', 'Lalu'),
+--     ('Lea','Rive')
+-- INSERT INTO
+--     customer_profile (isloggedin, customer_id)
+-- VALUES
+--     (
+--         TRUE,
+--         (
+--             SELECT
+--                 id
+--             FROM
+--                 customer c
+--             WHERE
+--                 c.first_name = 'John'
+--         )
+--     ),
+--     (
+--         FALSE,
+--         (
+--             SELECT
+--                 id
+--             FROM
+--                 customer c
+--             WHERE
+--                 c.first_name = 'Jerome'
+--         )
+--     )
+-- SELECT
+--     c.first_name
+-- FROM
+--     customer c
+--     INNER JOIN customer_profile cp ON c.id = cp.customer_id
+-- WHERE
+--     cp.isloggedin = TRUE
+-- SELECT c.first_name, cp.isloggedin FROM customer c LEFT JOIN customer_profile cp on c.id = cp.customer_id
+-- SELECT
+--     COUNT(*)
+-- FROM
+--     customer c
+--     INNER JOIN customer_profile cp on c.id = cp.customer_id
+-- WHERE
+--     cp.isloggedin = FALSE
+--EXERCISE 2
+-- CREATE TABLE book (
+--     book_id SERIAL NOT NULL,
+--     title VARCHAR NOT NULL,
+--     author VARCHAR NOT NULL,
+--     PRIMARY KEY (book_id)
+-- )
+-- INSERT INTO book (title, author)
+-- VALUES ('Alice In Wonderland', 'Lewis Carroll'),
+-- ('Harry Potter', 'JK Rowling'),
+-- ('To Kill A Mockingbird', 'Harper Lee')
+-- CREATE TABLE student (
+--     student_id SERIAL PRIMARY KEY,
+--     name VARCHAR NOT NULL UNIQUE,
+--     age DECIMAL (15)
+-- )
+-- INSERT INTO
+--     student (name, age)
+-- VALUES
+--     ('John', 12),
+--     ('Lera', 11),
+--     ('Patrick', 10),
+--     ('Bob', 37)
+-- CREATE TABLE student (
+--     student_id SERIAL PRIMARY KEY,
+--     name VARCHAR NOT NULL UNIQUE,
+--     age INTEGER CHECK (age >=0 and age<=15)
+-- )
+-- INSERT INTO
+--     student (name, age)
+-- VALUES
+--     ('John', 12),
+--     ('Lera', 11),
+--     ('Patrick', 10),
+--     ('Bob', 14)
+-- CREATE TABLE library (
+--     book_fk_id INT,
+--     student_id INT,
+--     borrowed_date DATE,
+--     PRIMARY KEY (book_fk_id, student_id),
+--     Foreign Key (book_fk_id) REFERENCES book (book_id) ON DELETE CASCADE ON UPDATE CASCADE,
+--     Foreign Key (student_id) REFERENCES student (student_id) ON DELETE CASCADE ON UPDATE CASCADE
+-- )
+-- INSERT INTO
+--     library (book_fk_id, student_id, borrowed_date)
+-- VALUES
+--     (
+--         (
+--             SELECT
+--                 book_id
+--             FROM
+--                 book
+--             WHERE
+--                 title ILIKE '%alice%'
+--         ),
+--         (
+--             SELECT
+--                 student_id
+--             FROM
+--                 student
+--             where
+--                 name ILIKE '%John%'
+--         ),
+--         '2022/02/15'
+--     )
+-- INSERT INTO
+--     library (book_fk_id, student_id, borrowed_date)
+-- VALUES
+--     (
+--         (
+--             SELECT
+--                 book_id
+--             FROM
+--                 book
+--             WHERE
+--                 title ILIKE '%mock%'
+--         ),
+--         (
+--             SELECT
+--                 student_id
+--             FROM
+--                 student
+--             where
+--                 name ILIKE '%bob%'
+--         ),
+--         '2021/03/03'
+--     ),
+--     (
+--         (
+--             SELECT
+--                 book_id
+--             FROM
+--                 book
+--             WHERE
+--                 title ILIKE '%alice%'
+--         ),
+--         (
+--             SELECT
+--                 student_id
+--             FROM
+--                 student
+--             where
+--                 name ILIKE '%lera%'
+--         ),
+--         '2023/05/23'
+--     ),
+--     (
+--         (
+--             SELECT
+--                 book_id
+--             FROM
+--                 book
+--             WHERE
+--                 title ILIKE '%harry%'
+--         ),
+--         (
+--             SELECT
+--                 student_id
+--             FROM
+--                 student
+--             where
+--                 name ILIKE '%bob%'
+--         ),
+--         '2021/08/12'
+--     )
+-- SELECT * FROM library
+-- SELECT
+--     s.name,
+--     b.title
+-- FROM
+--     student s
+--     INNER JOIN library l ON s.student_id = l.student_id
+--     INNER JOIN book b ON b.book_id = l.book_fk_id
+-- SELECT
+--     AVG(age)
+-- FROM
+--     student s
+--     INNER JOIN library l ON s.student_id = l.student_id
+--     INNER JOIN book b ON b.book_id = l.book_fk_id
+-- WHERE b.title ILIKE '%Alice%'
+
+-- DELETE FROM student WHERE name = 'Bob'
+-- SELECT * FROM library
