@@ -1,0 +1,104 @@
+--Day3 Exercise 1
+-- SELECT * FROM language
+-- SELECT f.title, f.description, l.name FROM film f LEFT JOIN language l on f.language_id = l.language_id
+-- SELECT f.title, f.description, l.name FROM film f RIGHT JOIN language l on f.language_id = l.language_id
+-- CREATE TABLE new_film ( id SERIAL PRIMARY KEY, name VARCHAR(255) )
+-- INSERT INTO new_film (name) VALUES
+-- ('The Silence of the Lambs'),
+-- ('Borat'),
+-- ('Coming to America'),
+-- ('Saving Private Ryan')
+-- SELECT * FROM new_film
+-- DROP TABLE IF EXISTS customer_review;
+-- CREATE TABLE customer_review (
+--     review_id SERIAL NOT NULL,
+--     film_id INT NOT NULL,
+--     language_id INT NOT NULL,
+--     title VARCHAR(255),
+--     score DECIMAL(10),
+--     review TEXT,
+--     last_update TIMESTAMP,
+--     PRIMARY KEY(review_id),
+--     CONSTRAINT fk_film_id 
+--         Foreign Key (film_id) 
+--         REFERENCES new_film (id) ON DELETE CASCADE,
+--     CONSTRAINT fk_language_id
+--         Foreign Key (language_id)
+--         REFERENCES language(language_id)
+-- -- )
+-- INSERT INTO
+--     customer_review (film_id, language_id, title, score, review)
+-- VALUES
+--     (1, 1, 'A wonderful film.', 10, 'What fanstastic acting and music'),
+--     (1,2, 'Molto bene', 8, 'Pizza pasta lasagne'),
+--     (2,4 ,'Chicken fried rice', 4, 'Crispy chilli beef')
+-- DELETE FROM new_film where id = 1
+-- SELECT * FROM customer_review
+--EXERCISE 2
+-- UPDATE film SET language_id = 6 WHERE film_id BETWEEN 1 AND 10 
+--DROP TABLE customer_review
+--Very easy!
+-- SELECT count(*) FROM rental WHERE return_date IS NULL
+-- SELECT
+--     f.title,
+--     f.rental_rate,
+--     r.return_date
+-- FROM
+--     film f
+--     INNER JOIN inventory i ON f.film_id = i.film_id
+--     INNER JOIN rental r ON i.inventory_id = r.inventory_id
+-- WHERE
+--     r.return_date IS NULL
+-- ORDER BY
+--     f.rental_rate DESC
+-- LIMIT
+--     30
+-- SELECT
+--     *
+-- FROM
+--     film f
+--     INNER JOIN film_actor fa on f.film_id = fa.film_id
+--     INNER JOIN actor a ON fa.actor_id = a.actor_id
+-- WHERE
+--     f.description ilike '%sumo%'
+--     and a.first_name ILIKE '%Penelope%'
+--     AND a.last_name ILIKE '%Monroe'
+--Park Citizen
+-- SELECT
+--     *
+-- FROM
+--     film f
+--     INNER JOIN film_category fc ON f.film_id = fc.film_id
+--     INNER JOIN category c ON fc.category_id = c.category_id
+-- WHERE
+--     f."length" < 60
+--     and f.rating = 'R'
+--     and c.name ILIKE '%Documentary%'
+--Cupboard Sinners
+-- SELECT
+--     *
+-- FROM
+--     film f
+--     INNER JOIN inventory i ON f.film_id = i.film_id
+--     INNER JOIN rental r ON i.inventory_id = r.inventory_id
+--     INNER JOIN customer c ON r.customer_id = c.customer_id
+-- WHERE
+--     f.rental_rate > 4
+--     AND (
+--         r.return_date BETWEEN '2005-07-28' AND '2005-08-01'
+--     )
+--     AND c.first_name = 'Matthew'
+--Sugar Wonka
+-- SELECT
+--     *
+-- FROM
+--     film f
+--     INNER JOIN inventory i ON f.film_id = i.film_id
+--     INNER JOIN rental r ON i.inventory_id = r.inventory_id
+--     INNER JOIN customer c ON r.customer_id = c.customer_id
+-- WHERE
+--     f.description ILIKE '%boat%'
+--     and c.last_name = 'Mahan'
+-- ORDER BY
+--     f.replacement_cost DESC
+    --Stone Fire (or Money Harold)
