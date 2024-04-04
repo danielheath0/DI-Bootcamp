@@ -74,7 +74,8 @@ const robots = [
 const wrapper = document.getElementById("wrapper");
 
 const populateRobots = (array) => {
-  robots.forEach((item) => {
+  wrapper.innerHTML = "";
+  array.forEach((item) => {
     const div = document.createElement("div");
 
     div.classList.add("robostyle");
@@ -93,13 +94,22 @@ populateRobots(robots);
 
 let newSearch = document.getElementById("search-box");
 newSearch.oninput = function () {
-  robots.forEach((item) => {
-    const div = document.getElementById(`robot${item.id}`);
-    const itemName = item.name.toLowerCase();
-    if (!itemName.includes(newSearch.value)) {
-      div.classList.add("hidden");
-    } else {
-      div.classList.remove("hidden");
-    }
-  });
+  const searchText = newSearch.value.toLowerCase();
+
+  const newRobotsList = robots.filter((item) =>
+    item.name.toLowerCase().includes(searchText)
+  );
+  console.log(newRobotsList);
+
+  populateRobots(newRobotsList);
 };
+//   robots.forEach((item) => {
+//     const div = document.getElementById(`robot${item.id}`);
+//     const itemName = item.name.toLowerCase();
+//     if (!itemName.includes(newSearch.value)) {
+//       div.classList.add("hidden");
+//     } else {
+//       div.classList.remove("hidden");
+//     }
+//   });
+// };
