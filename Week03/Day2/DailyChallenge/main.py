@@ -15,12 +15,14 @@ class Pagination:
             self.counter += self.pageSize
         else:
             self.counter = len(self.items) - self.pageSize
+        return self
 
     def prevPage(self):
         if self.counter >= self.pageSize:
             self.counter -= self.pageSize
         else:
             self.counter = 0
+        return self
 
     def firstPage(self):
         self.counter = 0
@@ -38,7 +40,9 @@ class Pagination:
 
 
 alphabetList = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-p = Pagination(alphabetList, 7)
+p = Pagination(alphabetList, 4)
 
+p.nextPage().nextPage().nextPage()
+print(p.getVisibleItems())
 
 

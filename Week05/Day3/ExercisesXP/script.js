@@ -1,97 +1,119 @@
-// //Exercise 1: Location
+// //Exercise 1
+// const displayNumbersDivisible = (divisor) => {
+//     sum = 0
+//     for (let index = 0; index < 501; index++) {
+//         if (index % divisor == 0) {
+//             sum += index
+//             console.log(index);
+//         };
 
-// const person = {
-//     name: 'John Doe',
-//     age: 25,
-//     location: {
-//         country: 'Canada',
-//         city: 'Vancouver',
-//         coordinates: [49.2827, -123.1207]
 //     }
+//     console.log(`Sum = ${sum}`)
 // }
 
-// const {name, location: {country, city, coordinates: [lat, lng]}} = person;
+// displayNumbersDivisible(23)
 
-// console.log(`I am ${name} from ${city}, ${country}. Latitude(${lat}), Longitude(${lng})`);
+// //Exercise 2
 
-// // Expected output: I am John Doe from Vancouver, Canada. Lattitude(49,2827), Longitude(-123.1207)
+// const stock = {
+//   banana: 6,
+//   apple: 0,
+//   pear: 12,
+//   orange: 32,
+//   blueberry: 1,
+// };
 
-// // Actual output: I am John Doe from Vancouver, Canada. Latitude(49.2827), Longitude(-123.1207)
+// const prices = {
+//   banana: 4,
+//   apple: 2,
+//   pear: 1,
+//   orange: 1.5,
+//   blueberry: 10,
+// };
 
-// //Exercise 2: Display Student Info
-// function displayStudentInfo({first, last}){
-//     console.log(`Your full name is ${first} ${last}`)
-// }
+// const shoppingList = ["banana", "orange", "apple"];
 
-// displayStudentInfo({first: 'Elie', last:'Schoppik'});
-
-// //Similar to **kwargs in Python!
-
-// //Exercise 3 User & ID
-
-// const users = { user1: 18273, user2: 92833, user3: 90315 };
-// const usersArray = Object.entries(users);
-
-// const doubledUsersArray = usersArray.map((arr) => [arr[0], arr[1] * 2]);
-
-// console.log(doubledUsersArray);
-
-// //Exercise 4: Person Class
-// class Person {
-//     constructor(name) {
-//       this.name = name;
+// const myBill = () => {
+//   let total = 0;
+//   for (let index = 0; index < shoppingList.length; index++) {
+//     let currentItem = shoppingList[index];
+//     if (currentItem in stock && stock[currentItem] > 0) {
+//       total += prices[currentItem];
+//       stock[currentItem]--;
 //     }
 //   }
+//   return total;
+// };
 
-//   const member = new Person('John');
-//   console.log(typeof member);
+// console.log(myBill());
 
-//   //Expected answer: Object
-//   //Actual answer: object
+// //Exercise 3
 
-// //Exercise 5: Dog Class
-// class Dog {
-//     constructor(name) {
-//       this.name = name;
+// const changeEnough = (itemPrice, amountOfChange) => {
+//   const coinValues = [0.25, 0.1, 0.05, 0.01];
+//   let totalValue=0
+//   for (let index = 0; index < amountOfChange.length; index++) {
+//     totalValue += amountOfChange[index]*coinValues[index]
+//   }
+// return itemPrice <= totalValue
+// };
+
+// console.log(changeEnough(14.11, [2,100,0,0]));
+// console.log(changeEnough(0.75, [0,0,20,5]) );
+
+// //Exercise 4
+
+// const hotelCost = () => {
+//   let nights = prompt("Please choose how many nights you would like to stay:");
+//   nights = parseInt(nights);
+//   if (!isNaN(nights) && Number.isInteger(nights) && nights > 0) {
+//     return nights * 140;
+//   } else {
+//     return hotelCost();
+//   }
+// };
+
+// const planeRideCost = () => {
+//   let price;
+//   let destination = prompt("Where are you going?");
+//   if (!typeof destination === "string") {
+//     return planeRideCost();
+//   } else {
+//     if (destination.toLowerCase() === "london") {
+//       price = 183;
+//     } else if (destination.toLowerCase() === "paris") {
+//       price = 220;
+//     } else {
+//       price = 300;
 //     }
-//   };
-//  //Number 2 will successfully extend. We need to super the name to bring it from Dog, but name also needs to be a parameter of the constructor.
-
-//Exercise 6: Challenges
-// [2] === [2] is True - False surpisingly!
-// {} === {} is False because nothing neither is nor is not equal to nothing.
-//Both are false because they are compared by reference.
-
-// const object1 = { number: 5 };
-// const object2 = object1;
-// const object3 = object2;
-// const object4 = { number: 5};
-
-// object1.number = 4;
-// console.log(object2.number)
-// console.log(object3.number)
-// console.log(object4.number)
-
-// 4 4 5 : makes sense because object3 object2 and object1 all point to the same reference. object4 points elsewhere.
-
-// class Animal {
-//   constructor(name, type, color) {
-//     this.name = name;
-//     this.type = type;
-//     this.color = color;
+//     return price;
 //   }
-// }
+// };
 
-// class Mammal extends Animal {
-//   constructor(name, type, color, noise) {
-//     super(name, type, color);
-//     this.noise = noise;
+// const rentalCarCost = () => {
+//   let carPrice;
+//   let days = prompt(`How many days would you like to rent the car for?`);
+//   days = parseInt(days);
+//   if (!isNaN(days) && Number.isInteger(days) && days > 0) {
+//     if (days <= 10) {
+//       carPrice = days * 40;
+//     } else {
+//       carPrice = days * 40 * 0.95; //5% discount if rent for more than 10 days
+//     }
+//   } else {
+//     return rentalCarCost();
 //   }
-//   sound(noise) {
-//     return `I'm a ${this.type} called ${this.name} and I'm ${this.color}. ${this.noise}!`
-//   }
-// }
 
-// let farmerCow = new Mammal('Simon','cow', 'spotted', 'Mooooo')
+//   return carPrice;
+// };
 
-// console.log(farmerCow.sound());
+// const totalVacationCost = () => {
+//   let hotel = hotelCost();
+//   let plane = planeRideCost();
+//   let car = rentalCarCost();
+
+//   return `Total cost is \$${hotel + plane + car}.`;
+// };
+
+// console.log(totalVacationCost());
+

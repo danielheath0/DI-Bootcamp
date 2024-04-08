@@ -1,0 +1,1 @@
+let newDiv = body.createElement('div')

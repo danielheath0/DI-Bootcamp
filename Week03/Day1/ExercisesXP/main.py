@@ -98,29 +98,29 @@
 #             self.animals.remove(self.animal_sold)
 #         print(f"{animal_sold} has been sold")
 
-#     def sort_animals(self):
-#         animal_alpha = sorted(self.animals)
-#         animal_groups = [[animal_alpha[0]]]
+    # def sort_animals(self):
+    #     animal_alpha = sorted(self.animals)
+    #     animal_groups = [[animal_alpha[0]]]
 
-#         for a in animal_alpha:
-#             if animal_groups[-1][0][0] == a[0]:
-#                 animal_groups[-1].append(a)
-#             else:
-#                 animal_groups.append([a])
-#         animal_groups[0].pop(0)
-#         # print(animal_groups)
+    #     for a in animal_alpha:
+    #         if animal_groups[-1][0][0] == a[0]:
+    #             animal_groups[-1].append(a)
+    #         else:
+    #             animal_groups.append([a])
+    #     animal_groups[0].pop(0)
+    #     # print(animal_groups)
 
-#         for i in range(len(animal_groups)):
-#             if len(animal_groups[i]) == 1:
-#                 unit = animal_groups[i][0]
-#                 animal_groups[i] = unit
+    #     for i in range(len(animal_groups)):
+    #         if len(animal_groups[i]) == 1:
+    #             unit = animal_groups[i][0]
+    #             animal_groups[i] = unit
 
-#         animal_dict = {}
+    #     animal_dict = {}
 
-#         for i, j in enumerate(animal_groups, start=1):
-#             animal_dict[i] = j
+    #     for i, j in enumerate(animal_groups, start=1):
+    #         animal_dict[i] = j
 
-#         return animal_dict
+    #     return animal_dict
 
 #     def get_groups(self):
 #         for key, value in self.sort_animals().items():

@@ -1,17 +1,16 @@
 from natsort import natsorted
 
 
-class Text():
-    
+class Text:
+
+    def __init__(self, sting):
+        self.sting = sting
+
     @classmethod
     def from_file(cls, filepath):
-        with open(filepath,'r') as f:
-            return cls(string = f.read())
-     
-    def __init__(self, string):
-        self.string = string
+        with open(filepath, "r") as f:
+            return cls(sting=f.read())
 
-    
     def word_dict(self):
         """Turns string into dictionary where key-value pairs represent individual words and their frequency. Final result is ordered from most frequent to least."""
         word_dict = {}
@@ -36,27 +35,27 @@ class Text():
                 return f"{word} appears {frequency} times!"
         else:
             return None
-        
+
     def most_common(self):
         """Finds most common words"""
         result = []
         previous_value = None
-        
-        for key,value in self.word_dict().items():
+
+        for key, value in self.word_dict().items():
             if previous_value is None:
                 previous_value = value
-         
+
             if value != previous_value:
                 break
             result.append(key)
-        
+
         if len(result) == 1:
             return f"The most common word is {result[0]}, appearing {previous_value} times."
         elif len(result) > 1:
             return f"The most common words are {str(result)[1:-1]},appearing {previous_value} times."
         else:
             return "Hmm, something is not right..."
-        
+
     def unique_words(self):
         """Finds all the words which only appear once"""
         result = []
@@ -68,11 +67,11 @@ class Text():
         elif len(result) > 1:
             return f"The unique words are {str(result)[1:-1]}."
         else:
-            return "Hmm, something is not right..."                
-                
+            return "Hmm, something is not right..."
 
-camus = Text.from_file('the_stranger.txt')
 
-print(camus.word_frequency('Arab')) # The Cure's first single
+camus = Text.from_file("the_stranger.txt")
+print(camus.word_dict())
+print(camus.word_frequency("Arab"))  # The Cure's first single
 print(camus.most_common())
-print(camus.unique_words()) 
+print(camus.unique_words())

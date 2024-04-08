@@ -75,10 +75,10 @@ main {
 }
 
 .ibm-plex-mono-light-italic {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 300;
-    font-style: italic;
-  }
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: italic;
+}
 
 .roboimage {
   border-radius: 50%;
@@ -86,5 +86,5 @@ main {
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
