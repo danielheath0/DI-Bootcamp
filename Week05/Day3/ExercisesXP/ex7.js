@@ -24,3 +24,4 @@ const listBooks = document.getElementsByClassName('allBooks')
 const newDiv = document.createElement('div')
 
 listBooks.appendChild(newDiv)
+ ;
