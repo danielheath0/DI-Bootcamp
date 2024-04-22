@@ -1,13 +1,18 @@
 let sentence = 'It\'s not that bad to be good you know'
 
-wordNot = sentence.indexOf('not')
+let wordNot = sentence.indexOf('not')
 
-// console.log(wordNot);
+console.log(wordNot);
 
-wordBad = sentence.indexOf('bad')
+let wordBad = sentence.indexOf('bad')
 
 console.log(wordBad)
 
 if (wordBad - wordNot > 0) {
-    
+    const newSentence = sentence.substring(0,wordNot) + "good" + sentence.substring(wordBad+3)
+    console.log(newSentence);
+}
+
+else {
+    console.log(sentence);
 }
